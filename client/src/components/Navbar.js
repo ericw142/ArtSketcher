@@ -16,7 +16,7 @@ function Navbar() {
             to="/profile"
             className={location.pathname === "/profile" ? "nav-link active" : "nav-link"}
           >
-            About
+            Profile
           </Link>
         </li>
         <li className="nav-item">
