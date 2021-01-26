@@ -1,8 +1,10 @@
 const express = require("express");
 const path = require("path");
 const mongoose = require("mongoose");
-
-// const passport = require("./client/src/config/passport");
+const apiRoutes = require("./routes/apiRoutes");
+const userRoutes = require("./models/route/user");
+const passport = require('passport');
+const User = require('./models/user');
 
 const PORT = process.env.PORT || 3001;
 const app = express();
@@ -13,14 +15,23 @@ app.use(express.json());
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
+// Passport
+const LocalStrategy = require("passport-local").Strategy;
 
-// app.use(
-//   session({ secret: "keyboard cat", resave: true, saveUninitialized: true })
-// );
-// app.use(passport.initialize());
-// app.use(passport.session());
+passport.use(new LocalStrategy(User.authenticate())); 
 
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/artsketcher_db");
+// Serializing User
+passport.serializeUser(User.serializeUser()); 
+passport.deserializeUser(User.deserializeUser()); 
+
+app.use(passport.initialize()); 
+app.use(passport.session()); 
+
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/artsketcher_db", { useUnifiedTopology: true, useNewUrlParser: true, useCreateIndex: true });
+
+// Routing
+app.use("/user", userRoutes);
+app.use("/api", apiRoutes);
 
 app.get("*", function(req, res) {
   res.sendFile(path.join(__dirname, "./client/build/index.html"));
