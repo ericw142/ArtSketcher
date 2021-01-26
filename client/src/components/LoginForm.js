@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import API from "../utils/API";
+import 'bootstrap/dist/css/bootstrap.css';
 
 class LoginForm extends Component {
 
