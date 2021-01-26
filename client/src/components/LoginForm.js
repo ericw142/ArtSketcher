@@ -11,7 +11,9 @@ class LoginForm extends Component {
        let password = event.target.loginPassword.value;
 
        API.login({username, password})
-       .then(res => console.log(res))
+       .then(res => {
+           window.location.replace("/profile");
+       })
        .catch(err => console.log(err));
     }
 
