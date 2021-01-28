@@ -1,8 +1,12 @@
 import React from "react";
+import Canvas from "../components/Canvas";
 
 function Profile() {
   return (
-    <p>Profile</p>
+    <div>
+      <p>Profile</p>
+      <Canvas />
+    </div>
   );
 }
 

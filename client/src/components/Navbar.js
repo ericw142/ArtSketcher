@@ -1,6 +1,5 @@
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
-// import 'bootstrap/dist/css/bootstrap.css';
 
 function Navbar() {
     const location = useLocation();
@@ -18,14 +17,6 @@ function Navbar() {
             className={location.pathname === "/profile" ? "nav-link active" : "nav-link"}
           >
             Profile
-          </Link>
-        </li>
-        <li className="nav-item">
-          <Link
-            to="/drawing"
-            className={location.pathname === "/drawing" ? "nav-link active" : "nav-link"}
-          >
-            Drawing
           </Link>
         </li>
         <li className="nav-item">
