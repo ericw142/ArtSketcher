@@ -12,6 +12,7 @@ class LoginForm extends Component {
 
        API.login({username, password})
        .then(res => {
+           console.log(res.token);
            window.location.replace("/profile");
        })
        .catch(err => console.log(err));
@@ -19,6 +20,12 @@ class LoginForm extends Component {
 
     render() {
         return(
+            <div className="container">
+                <div className="row">
+                <div class="card card-signin my-5">
+                <div class="card-body">
+                <h5 class="card-title text-center">Sign In</h5>
+                <hr/>          
             <form className="login" onSubmit={this.submitLoginForm}>
                 <div className="form-group">
                     <label htmlFor="loginUsername">Username</label>
@@ -28,8 +35,12 @@ class LoginForm extends Component {
                     <label htmlFor="loginPassword">Password</label>
                     <input type="password" name="loginPassword" className="form-control" placeholder="Password"></input>
                 </div>
-                <button type="submit" className="btn btn-default">Login</button>
+                <button type="submit" className="btn btn-md btn-primary">Login</button>
             </form>
+            </div>
+            </div>
+           </div>
+           </div> 
         )
     }
 }

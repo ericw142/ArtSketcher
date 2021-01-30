@@ -4,6 +4,7 @@ import Navbar from "./components/Navbar";
 import Home from "./pages/home";
 import Login from "./pages/login";
 import Profile from "./pages/profile";
+import Footer from "./components/footer";
 
 function App() {
   return (
@@ -13,8 +14,10 @@ function App() {
         <Route exact path="/" component={Home} />
         <Route exact path="/profile" component={Profile} />
         <Route path="/login" component={Login} />
+        <Footer />
       </div>
     </Router>
+    
   );
 }
 

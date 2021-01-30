@@ -6,6 +6,10 @@ const API = {
     },
     login: function(data) {
         return axios.post("/user/login", data);
+    },
+    savedPost: function(data) {
+        console.log("api.js" +data);
+        return axios.post("/api/posts", data);
     }
 };
 

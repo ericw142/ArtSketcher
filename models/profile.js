@@ -3,9 +3,9 @@ const Schema = mongoose.Schema;
 
 const ProfileSchema = new Schema({ 
 
-    user:{
+    username:{
         type: Schema.Types.ObjectId,
-        ref: 'users'
+        ref: 'User'
     },
     
     bio:{
@@ -15,4 +15,6 @@ const ProfileSchema = new Schema({
     
 })
 
-module.exports = Profile = mongoose.model('profile',ProfileSchema)
+const Profile = mongoose.model('profile',ProfileSchema)
+
+module.exports = Profile;
