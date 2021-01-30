@@ -25,17 +25,28 @@ function LoginForm(props){
     }
    
     return(
-        <form className="login" onSubmit={submitLoginForm}>
-            <div className="form-group">
-                <label htmlFor="loginUsername">Username</label>
-                <input type="text" name="loginUsername" className="form-control" placeholder="Username"></input>
+        <div className="container">
+                <div className="row">
+                <div class="card card-signin my-5">
+                <div class="card-body">
+                <h5 class="card-title text-center">Sign In</h5>
+                <hr/>  
+                <form className="login" onSubmit={submitLoginForm}>
+                    <div className="form-group">
+                    
+                    <label htmlFor="loginUsername">Username</label>    
+                    <input type="text" name="loginUsername" className="form-control" placeholder="Username"></input>
+                    </div>
+                    <div className="form-group">
+                    <label htmlFor="loginPassword">Password</label>
+                    <input type="password" name="loginPassword" className="form-control" placeholder="Password"></input>
+                    </div>
+                    <button type="submit" className="btn btn-md btn-primary">Login</button>
+                </form>  
+                </div>
             </div>
-            <div className="form-group">
-                <label htmlFor="loginPassword">Password</label>
-                <input type="password" name="loginPassword" className="form-control" placeholder="Password"></input>
-            </div>
-            <button type="submit" className="btn btn-default">Login</button>
-        </form>
+           </div>
+        </div>  
     )    
 
 }
