@@ -30,7 +30,11 @@ class SignupForm extends Component {
 
     render() {
         return(
-            <div>
+            <div className="container">
+                <div className="row">
+                <div class="card card-signin my-5">
+                <div class="card-body">
+                <h5 class="card-title text-center">Sign Up</h5>         
                  <form className="signup" onSubmit={this.submitSignupForm}>
                     <div className="form-group">
                         <label htmlFor="username">Username</label>
@@ -44,9 +48,12 @@ class SignupForm extends Component {
                         <label htmlFor="password">Password</label>
                         <input type="password" name="password" className="form-control" placeholder="Password"></input>
                     </div>
-                    <button type="submit" className="btn btn-default">Register</button>
+                    <button type="submit" className="btn btn-primary">Register</button>
                  </form>
                  {this.successDisplay()}
+                 </div>
+                 </div>
+                 </div> 
             </div>
         )
     }
