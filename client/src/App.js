@@ -13,8 +13,6 @@ function App() {
     username: ""
   })
 
-  let loggedIn = false;
-
   return (
 
       <Router>
