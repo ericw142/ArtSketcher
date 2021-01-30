@@ -4,6 +4,7 @@ import Navbar from "./components/Navbar";
 import Home from "./pages/home";
 import Login from "./pages/login";
 import Profile from "./pages/profile";
+import Footer from "./components/footer";
 
 import Context from "./utils/Context";
 
@@ -15,6 +16,7 @@ function App() {
   let loggedIn = false;
 
   return (
+
       <Router>
         <div className="App">
           <Navbar />
@@ -27,6 +29,7 @@ function App() {
          
         </div>
       </Router>
+
   );
 }
 

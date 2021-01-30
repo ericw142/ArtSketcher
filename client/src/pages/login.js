@@ -21,12 +21,11 @@ class Login extends Component {
 
   render() {
     return (
-      <div>
-        <h2>Login to begin</h2>
+      <div className="text-center">
           <LoginForm />
           <br />
-        <h2>Don't have an account? Click here to sign up.</h2>
-        <button onClick={this.handleFormDisplay}>Sign Up</button>
+        <h2 className="text-center">Don't have an account? Click here to sign up.</h2>
+        <button className="btn btn-primary text-center" onClick={this.handleFormDisplay}>Sign Up</button>
           <br />
         {this.renderForm()}
       </div>

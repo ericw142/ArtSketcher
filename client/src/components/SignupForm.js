@@ -19,9 +19,12 @@ class SignupForm extends Component {
 
     render() {
         return(
+
             <div>
                  <Sform />
+
                  {this.successDisplay()}
+            
             </div>
         )
     }

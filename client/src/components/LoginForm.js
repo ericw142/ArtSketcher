@@ -14,14 +14,15 @@ function LoginForm(props){
 
        API.login({username, password})
        .then(res => {
+
            console.log(res.data);
 
            context.username = res.data.user;
            alert("Logged In!");
+
        })
        .catch(err => console.log(err));
     }
-
    
     return(
         <form className="login" onSubmit={submitLoginForm}>
@@ -36,6 +37,7 @@ function LoginForm(props){
             <button type="submit" className="btn btn-default">Login</button>
         </form>
     )    
+
 }
 
 export default LoginForm;
