@@ -1,10 +1,12 @@
-import React, { Component } from "react";
+import React, { useContext } from "react";
+import {Redirect} from "react-router-dom";
+import Context from "../utils/Context";
 import API from "../utils/API";
-import 'bootstrap/dist/css/bootstrap.css';
 
-class LoginForm extends Component {
+function LoginForm(props){
+    const [context, setContext] = useContext(Context);
 
-    submitLoginForm = event => {
+    const submitLoginForm = event => {
        event.preventDefault();
 
        let username = event.target.loginUsername.value;
@@ -12,37 +14,30 @@ class LoginForm extends Component {
 
        API.login({username, password})
        .then(res => {
-           console.log(res.token);
-           window.location.replace("/profile");
+
+           console.log(res.data);
+
+           context.username = res.data.user;
+           alert("Logged In!");
+
        })
        .catch(err => console.log(err));
     }
+   
+    return(
+        <form className="login" onSubmit={submitLoginForm}>
+            <div className="form-group">
+                <label htmlFor="loginUsername">Username</label>
+                <input type="text" name="loginUsername" className="form-control" placeholder="Username"></input>
+            </div>
+            <div className="form-group">
+                <label htmlFor="loginPassword">Password</label>
+                <input type="password" name="loginPassword" className="form-control" placeholder="Password"></input>
+            </div>
+            <button type="submit" className="btn btn-default">Login</button>
+        </form>
+    )    
 
-    render() {
-        return(
-            <div className="container">
-                <div className="row">
-                <div class="card card-signin my-5">
-                <div class="card-body">
-                <h5 class="card-title text-center">Sign In</h5>
-                <hr/>          
-            <form className="login" onSubmit={this.submitLoginForm}>
-                <div className="form-group">
-                    <label htmlFor="loginUsername">Username</label>
-                    <input type="text" name="loginUsername" className="form-control" placeholder="Username"></input>
-                </div>
-                <div className="form-group">
-                    <label htmlFor="loginPassword">Password</label>
-                    <input type="password" name="loginPassword" className="form-control" placeholder="Password"></input>
-                </div>
-                <button type="submit" className="btn btn-md btn-primary">Login</button>
-            </form>
-            </div>
-            </div>
-           </div>
-           </div> 
-        )
-    }
 }
 
 export default LoginForm;
