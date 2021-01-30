@@ -2,6 +2,7 @@
 const express = require('express');  
 const router = express.Router(); 
 const userController = require("../../controllers/userController");
+
 // importing User Schema  
 const User = require('../user');
 
@@ -11,7 +12,8 @@ router.post("/signup", (req, res) => {
             if (err) { 
               res.json({success:false, message:"Your account could not be saved. Error: ", err})  
             }else{ 
-              res.json({success: true, message: "Your account has been saved"}) 
+              let token = generateToken(User);
+              res.json({user:User, token: token, success: true, message: "Your account has been saved"}) 
             } 
         }); 
 });

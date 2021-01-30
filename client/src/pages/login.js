@@ -13,7 +13,9 @@ class Login extends Component {
 
   renderForm = () => {
     if (this.state.currentForm === "signup") {
-      return <SignupForm />
+      return (
+        <SignupForm />
+      )
     }
   }
 

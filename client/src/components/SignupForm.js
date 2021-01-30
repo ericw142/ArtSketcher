@@ -1,6 +1,7 @@
-import React, { Component } from "react";
+import React, { Component, useContext } from "react";
 import API from "../utils/API";
-
+import Context from "../utils/Context";
+import Sform from "./Sform";
 
 class SignupForm extends Component {
     state = {
@@ -16,40 +17,15 @@ class SignupForm extends Component {
         }
     }
 
-    submitSignupForm = event => {
-        event.preventDefault();
-
-        let username = event.target.username.value;
-        let email = event.target.email.value;
-        let password = event.target.password.value
-
-        API.signup({username, email, password})
-        .then(res => this.setState({signedUp: true}))
-        .catch(err => console.log(err));
-    };
-
     render() {
         return(
             <div>
-                 <form className="signup" onSubmit={this.submitSignupForm}>
-                    <div className="form-group">
-                        <label htmlFor="username">Username</label>
-                        <input type="text" name="username" className="form-control" placeholder="Username"></input>
-                    </div>
-                    <div className="form-group">
-                        <label htmlFor="email">Email</label>
-                        <input type="email" name="email" className="form-control" placeholder="Email"></input>
-                    </div>
-                    <div className="form-group">
-                        <label htmlFor="password">Password</label>
-                        <input type="password" name="password" className="form-control" placeholder="Password"></input>
-                    </div>
-                    <button type="submit" className="btn btn-default">Register</button>
-                 </form>
+                 <Sform />
                  {this.successDisplay()}
             </div>
         )
     }
 }
+SignupForm.contextType = Context;
 
 export default SignupForm;
