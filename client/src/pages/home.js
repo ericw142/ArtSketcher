@@ -1,5 +1,6 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import Context from "../utils/Context";
+import PostDisplay from "../components/PostDisplay";
 
 function Home(props) {
   const [context, setContext] = useContext(Context);
@@ -12,6 +13,7 @@ function Home(props) {
     <div>
       <h1>Home</h1>
       <button onClick={logState}>Log</button>
+      <PostDisplay />
     </div>
   );
 }

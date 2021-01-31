@@ -10,6 +10,9 @@ const API = {
     savedPost: function(data) {
         console.log("api.js" +data);
         return axios.post("/api/posts", data);
+    },
+    getPosts: function() {
+        return axios.get("/api/home");
     }
 };
 
