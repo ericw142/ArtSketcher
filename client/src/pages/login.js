@@ -21,6 +21,7 @@ class Login extends Component {
 
   render() {
     return (
+      <div className="card">
       <div className="text-center">
           <LoginForm />
           <br />
@@ -29,6 +30,7 @@ class Login extends Component {
           <br />
         {this.renderForm()}
       </div>
+     </div> 
     );
   }
 }

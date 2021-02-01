@@ -25,7 +25,6 @@ class PostDisplay extends Component {
         }
         return(
             <div>
-                <p>post display</p>
                 {this.state.posts.map(post => (<Post image={post.image}/>))}
             </div>
         )
