@@ -32,7 +32,7 @@ return (
             <div className="text-center">
                 <canvas ref={canvasRef} {...props} id='paper-canvas' height="200" width="400" resize='true' />
 
-                <button className="btn-btn primary" onClick={logCanvas}>Click here to console log canvas ref</button>
+                <button className="btn-btn secondary" onClick={logCanvas}>Click here to console log canvas ref</button>
             </div>
         </div>
     </div>

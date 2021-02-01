@@ -25,7 +25,6 @@ function App() {
                   <Route exact path="/profile" component={Profile}/>
                   <Footer />
             </Context.Provider>
-         
         </div>
       </Router>
 
