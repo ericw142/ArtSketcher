@@ -8,7 +8,6 @@ const API = {
         return axios.post("/user/login", data);
     },
     savedPost: function(data) {
-        console.log("api.js" +data);
         return axios.post("/api/posts", data);
     },
     getPosts: function() {

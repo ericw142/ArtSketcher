@@ -1,9 +1,11 @@
-import React, { useRef, useEffect } from "react";
+import React, { useRef, useEffect, useContext } from "react";
+import Context from "../utils/Context";
 import Paper from 'paper';
 import Sketch from './Sketch';
 import API from '../utils/API';
 
 const Canvas = props => {
+    const [context, setContext] = useContext(Context);
     const canvasRef = useRef(null)
 
     useEffect(() => {
@@ -17,9 +19,9 @@ const Canvas = props => {
         let image = canvas.toDataURL();
         canvas.src = image;
 
-        console.log (image);
+        let user = context.username;
 
-        API.savedPost({image})
+        API.savedPost({image, user})
             .then(res => console.log("success"))
             .catch(err => console.log(err));
     };
@@ -31,8 +33,8 @@ return (
         <div className="row">
             <div className="text-center">
                 <canvas ref={canvasRef} {...props} id='paper-canvas' height="200" width="400" resize='true' />
-
-                <button className="btn-btn primary" onClick={logCanvas}>Click here to console log canvas ref</button>
+                <button className="btn btn-secondary">Change Color</button>
+                <button className="btn btn-primary" onClick={logCanvas}>Save your Drawing</button>
             </div>
         </div>
     </div>

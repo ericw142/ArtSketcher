@@ -6,7 +6,7 @@ function Navbar() {
   
     return (
       <nav>
-      <span class="navbar-header" href="#">ArtSketcher</span>
+      <span className="navbar-header" href="#">ArtSketcher</span>
       <ul className="nav justify-content-center nav-tabs">
         <li className="nav nav-tabs pull-right">
           <Link to="/" className={location.pathname === "/home" ? "nav-link active" : "nav-link"}>

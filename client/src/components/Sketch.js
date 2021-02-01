@@ -12,14 +12,6 @@ const Sketch = () => {
           myPath.add(event.point);
       }
       
-      paper.view.onMouseUp = function(event) {
-          var myCircle = new paper.Path.Circle({
-              center: event.point,
-              radius: 10
-          });
-          myCircle.strokeColor = 'black';
-          myCircle.fillColor = 'white';
-      }
   
       paper.view.draw();
 }    

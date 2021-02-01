@@ -27,9 +27,9 @@ function LoginForm(props){
     return(
         <div className="container">
                 <div className="row">
-                <div class="card card-signin my-5">
-                <div class="card-body">
-                <h5 class="card-title text-center">Sign In</h5>
+                <div className="card card-signin my-5">
+                <div className="card-body">
+                <h5 className="card-title text-center">Sign In</h5>
                 <hr/>  
                 <form className="login" onSubmit={submitLoginForm}>
                     <div className="form-group">

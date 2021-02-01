@@ -1,18 +1,19 @@
 import React, {useEffect, useContext} from "react";
-import ReactDOM from "react-dom";
+import ReactDOM, { render } from "react-dom";
 import Canvas from "../components/Canvas";
 import Context from "../utils/Context";
-import Login from "../pages/login";
+
 
 function Profile(props) {
   const [context, setContext] = useContext(Context);
 
-  useEffect(() => {
-    if(context.username === "") {
-      // ReactDOM.render(<Login />) 
-    } 
-  }, [])
-
+  if (context.username === "") {
+    return(
+      <div>
+        <h2>Please log in to start using ArtSketcher!</h2>
+      </div>
+    )
+  }
   return (
     <div>
       <p>Profile</p>
