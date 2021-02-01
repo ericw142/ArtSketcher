@@ -34,7 +34,7 @@ return (
             <div className="text-center">
                 <canvas ref={canvasRef} {...props} id='paper-canvas' height="200" width="400" resize='true' />
                 <button className="btn btn-secondary">Change Color</button>
-                <button className="btn btn-primary" onClick={logCanvas}>Save your Drawing</button>
+                <button className="btn btn-secondary" onClick={logCanvas}>Save your Drawing</button>
             </div>
         </div>
     </div>
