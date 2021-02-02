@@ -24,8 +24,10 @@ class PostDisplay extends Component {
             )
         }
         return(
-            <div>
-                {this.state.posts.map(post => (<Post image={post.image}/>))}
+            <div className="marginTop">
+                <div className="row" style={{ textAlign : 'center;'}}>
+                {this.state.posts.map(post => (<Post image={post.image} user={post.user} text={post.text}/>))}
+                </div>
             </div>
         )
     }

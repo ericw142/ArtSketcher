@@ -2,16 +2,17 @@ import React from "react";
 
 function Post(props) {
     return(
-        <div className="row" style={{ textAlign : 'center;'}}>
+        
         <div class="col-md-6">  
-        <div className="card">
+        <div className="card post">
             <img src={props.image}></img>
+            <h5>{props.user}'s Post</h5>
             <div class="card-body">
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>  
+            <p class="card-text">{props.text}</p>  
             </div>
         </div>
        </div> 
-       </div>  
+       
     )
 }
 

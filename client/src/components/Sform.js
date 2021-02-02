@@ -15,10 +15,10 @@ function Sform(props) {
         API.signup({username, email, password})
         .then(res => {
             context.username = username;
+            alert("Successfully signed in!")
         })
         .catch(err => console.log(err));
     };
-
     return(
         <div className="container">
                 <div className="row">
@@ -45,7 +45,7 @@ function Sform(props) {
                 </div>
                 </div>
                 </div>
-                </div>
+        </div>
     )
 }
 

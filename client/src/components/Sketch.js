@@ -1,25 +1,28 @@
 import paper from 'paper';
 
-const Sketch = () => {
+function Sketch(color) {
     var myPath;
-  
-      paper.view.onMouseDown = function(event) {
+      if (color === null) {
+        paper.view.onMouseDown = function(event) {
           myPath = new paper.Path();
           myPath.strokeColor = 'black';
+        }
+      
+        paper.view.onMouseDrag = function(event) {
+            myPath.add(event.point);
+        }
+      }
+      else {
+        paper.view.onMouseDown = function(event) {
+          myPath = new paper.Path();
+          myPath.strokeColor = color;
+        }
+      
+        paper.view.onMouseDrag = function(event) {
+            myPath.add(event.point);
+        }
       }
       
-      paper.view.onMouseDrag = function(event) {
-          myPath.add(event.point);
-      }
-      
-      paper.view.onMouseUp = function(event) {
-          var myCircle = new paper.Path.Circle({
-              center: event.point,
-              radius: 10
-          });
-          myCircle.strokeColor = 'black';
-          myCircle.fillColor = 'white';
-      }
   
       paper.view.draw();
 }    
