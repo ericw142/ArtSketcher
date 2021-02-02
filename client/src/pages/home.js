@@ -5,10 +5,6 @@ import PostDisplay from "../components/PostDisplay";
 function Home(props) {
   const [context, setContext] = useContext(Context);
 
-  const logState = () => {
-    console.log(context)
-  }
-
   return (
     <div className="card">
       
@@ -18,8 +14,6 @@ function Home(props) {
     <h2>Drawings Wall</h2>
   </div>
       <div className="col-md-10"></div>
-      {/* <button onClick={logState}>Log</button> */}
-      
       <PostDisplay />
       </div>
       </header>

@@ -27,7 +27,7 @@ function Profile(props) {
       <div className="col-md-10">
       <div className="panel">
         <img className="pic img-circle" src="http://placehold.it/120x120" alt="..." />
-        <div className="name"><small>Apple K, India</small></div>
+        <div className="name"><small>{context.username}</small></div>
       </div>
       
     {/* {this.state.following_num} */}

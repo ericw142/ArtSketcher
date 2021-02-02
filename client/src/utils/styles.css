@@ -1,3 +1,60 @@
 #paper-canvas {
     border: 2px solid black;
 }
+
+.marginTop {
+    margin-top: 30px;
+}
+
+.post {
+    margin-top: 15px;
+}
+
+
+/* Canvas Drawing Tools */
+.colorButtons {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: none;
+}
+#red {
+    background-color: red;
+}
+
+#orange {
+    background-color: orange;
+}
+
+#yellow {
+    background-color: yellow;
+}
+
+#green {
+    background-color: green;
+}
+
+#blue {
+    background-color: blue;
+}
+
+#purple {
+    background-color: purple;
+}
+
+#pink {
+    background-color: pink;
+}
+
+#brown {
+    background-color: brown;
+}
+
+#black {
+    background-color: black;
+}
+
+#white {
+    background-color: white;
+    border: 1px solid black;
+}
