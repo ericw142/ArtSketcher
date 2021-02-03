@@ -4,7 +4,7 @@ import Context from "../utils/Context";
 import API from "../utils/API";
 
 function LoginForm(props){
-    const [context, setContext] = useContext(Context);
+    const [context] = useContext(Context);
 
     const submitLoginForm = event => {
        event.preventDefault();
@@ -16,10 +16,12 @@ function LoginForm(props){
        .then(res => {
 
            console.log(res.data);
-
-           context.username = res.data.user;
-           alert("Logged In!");
-
+            if (res.data.success === false) {
+                alert("Your username or password are incorrect.")
+            } else {
+                context.username = res.data.user;
+                alert("Logged In!");
+            }  
        })
        .catch(err => console.log(err));
     }
