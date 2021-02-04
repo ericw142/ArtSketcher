@@ -3,7 +3,7 @@ import Context from "../utils/Context";
 import API from "../utils/API";
 
 function Sform(props) {
-    const [context, setContext] = useContext(Context);
+    const [context] = useContext(Context);
 
     const submitSignupForm = event => {
         event.preventDefault();
@@ -14,8 +14,13 @@ function Sform(props) {
 
         API.signup({username, email, password})
         .then(res => {
-            context.username = username;
-            alert("Successfully signed in!")
+            console.log(res.data);
+            if (res.data.success === false) {
+                alert("Your desired username or email are already in use. Please use another.");
+            } else {
+                context.username = username;
+                alert("Successfully signed up!")
+            }
         })
         .catch(err => console.log(err));
     };

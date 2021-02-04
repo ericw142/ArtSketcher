@@ -12,8 +12,7 @@ router.post("/signup", (req, res) => {
             if (err) { 
               res.json({success:false, message:"Your account could not be saved. Error: ", err})  
             }else{ 
-              let token = generateToken(User);
-              res.json({user:User, token: token, success: true, message: "Your account has been saved"}) 
+              res.json({user:User, success: true, message: "Your account has been saved"}) 
             } 
         }); 
 });

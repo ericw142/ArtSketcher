@@ -1,9 +1,7 @@
-import React, { useContext, useEffect } from "react";
-import Context from "../utils/Context";
+import React from "react";
 import PostDisplay from "../components/PostDisplay";
 
 function Home(props) {
-  const [context, setContext] = useContext(Context);
 
   return (
     <div className="card">

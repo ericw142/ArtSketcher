@@ -37,7 +37,7 @@ Profile.find({}).sort({date: -1})
 
   //posts
   router.post("/posts", (req, res) => {
-    let postData = {text: req.body.text, image:req.body.image, user: req.body.user}
+    let postData = {text: req.body.text, image:req.body.image, user: req.body.user, likes: 0}
     Post.insertMany(postData)
       .then(dbPost => {
         res.json(dbPost);

@@ -1,5 +1,4 @@
-import React, { Component, useContext } from "react";
-import API from "../utils/API";
+import React, { Component } from "react";
 import Context from "../utils/Context";
 import Sform from "./Sform";
 

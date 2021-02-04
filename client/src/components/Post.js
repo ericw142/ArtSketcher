@@ -8,9 +8,8 @@ function Post(props) {
             <img src={props.image}></img>
             <hr/>
             <h5>{props.user}'s Post</h5>
-            <hr/>
-            <div class="card-body">
-            <p class="card-text">{props.text}</p>  
+            <div className="card-body">
+            <p className="card-text">{props.text}</p>  
             </div>
         </div>
        </div> 
