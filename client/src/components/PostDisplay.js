@@ -1,4 +1,4 @@
-import React, {Component, useEffect} from "react";
+import React, {Component} from "react";
 import Post from "./Post";
 import API from "../utils/API";
 
@@ -9,10 +9,8 @@ class PostDisplay extends Component {
     componentDidMount() {
         API.getPosts()
         .then(res=> {
-          console.log(res);
           let posts = res.data;
           this.setState({posts})
-          console.log(this.state.posts)
         })
         .catch(err => console.log(err));
     }
@@ -26,7 +24,7 @@ class PostDisplay extends Component {
         return(
             <div className="marginTop">
                 <div className="row" style={{ textAlign : 'center;'}}>
-                {this.state.posts.map(post => (<Post image={post.image} user={post.user} text={post.text}/>))}
+                {this.state.posts.map(post => (<Post image={post.image} user={post.user} text={post.text} id={post._id} key={post._id}/>))}
                 </div>
             </div>
         )

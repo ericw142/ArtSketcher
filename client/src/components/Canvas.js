@@ -5,8 +5,9 @@ import Sketch from './Sketch';
 import API from '../utils/API';
 
 const Canvas = props => {
-    const [context, setContext] = useContext(Context);
+    const [context] = useContext(Context);
     const canvasRef = useRef(null)
+    let width;
 
     useEffect(() => {
         const canvas = canvasRef.current;
@@ -16,34 +17,44 @@ const Canvas = props => {
 
     // Color Options
     function red() {
-        Sketch('red')
+        width = document.getElementById("width").value;
+        Sketch('red', width)
     }
     function orange() {
-        Sketch('orange')
+        width = document.getElementById("width").value;
+        Sketch('orange', width)
     }
     function yellow() {
-        Sketch('yellow')
+        width = document.getElementById("width").value;
+        Sketch('yellow', width)
     }
     function green() {
-        Sketch('green')
+        width = document.getElementById("width").value;
+        Sketch('green', width)
     }
     function blue() {
-        Sketch('blue')
+        width = document.getElementById("width").value;
+        Sketch('blue', width)
     }
     function purple() {
-        Sketch('purple')
+        width = document.getElementById("width").value;
+        Sketch('purple', width)
     }
     function pink() {
-        Sketch('pink')
+        width = document.getElementById("width").value;
+        Sketch('pink', width)
     }
     function brown() {
-        Sketch('brown')
+        width = document.getElementById("width").value;
+        Sketch('brown', width)
     }
     function black() {
-        Sketch('black')
+        width = document.getElementById("width").value;
+        Sketch('black', width)
     }
     function white() {
-        Sketch('white')
+        width = document.getElementById("width").value;
+        Sketch('white', width)
     }
 
 
@@ -81,6 +92,7 @@ return (
                 <button className="colorButtons" id="brown" onClick={brown}></button>
                 <button className="colorButtons" id="black" onClick={black}></button>
                 <button className="colorButtons" id="white" onClick={white}></button>
+                <input type="range" id="width" min="1" max="30"></input>
                 <h6>Description</h6>
                 <textarea id="textInput"></textarea>
                 <button className="btn btn-secondary" onClick={logCanvas}>Save your Drawing</button>

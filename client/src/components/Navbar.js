@@ -6,8 +6,8 @@ function Navbar() {
   
     return (
       
-      <nav class="navbar navbar-expand-lg navbar-light bg-dark cyan">
-      <span class="navbar-brand font-bold" style={{ color : 'white'}} href="#">ArtSketcher</span>
+      <nav className="navbar navbar-expand-lg navbar-light bg-dark cyan">
+      <span className="navbar-brand font-bold" style={{ color : 'white'}} href="#">ArtSketcher</span>
 
       <div className="collapse navbar-collapse" id="navbarSuapportedContent-4">
       <ul className="navbar-nav nav-tabs ml-auto">
@@ -29,6 +29,13 @@ function Navbar() {
             to="/login"
             className={location.pathname === "/login" ? "nav-link" : "nav-link"} style={{ color : 'white'}} >
             Login
+          </Link>
+        </li>
+        <li className="nav-item">
+          <Link
+            to="/logout"
+            className={location.pathname === "/login" ? "nav-link" : "nav-link"} style={{ color : 'white'}} >
+            Logout
           </Link>
         </li>
         </ul>
