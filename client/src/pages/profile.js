@@ -3,7 +3,6 @@ import ReactDOM from "react-dom";
 import { Link, useLocation} from "react-router-dom";
 import Canvas from "../components/Canvas";
 import Context from "../utils/Context";
-import PostDisplay from "../components/PostDisplay";
 import UserPost from "../components/userPost";
 
 function Profile(props) {

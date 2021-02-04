@@ -6,7 +6,6 @@ import Login from "./pages/login";
 import Profile from "./pages/profile";
 import Footer from "./components/footer";
 import Logout from "./pages/logout";
-
 import Context from "./utils/Context";
 
 function App() {
