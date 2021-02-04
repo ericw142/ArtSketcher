@@ -68,4 +68,15 @@ Post.find({}).sort({date: -1})
       });
   });
 
+  router.get("/userPost/:username", (req, res) => {
+    console.log(req.params.username)
+    // Post.find({"user":req.data.username}).sort({date: -1})
+    //       .then(dbPost => {
+    //         res.json(dbPost);
+    //       })
+    //       .catch(err => {
+    //         res.status(404).json(err);
+    //       });
+      });
+
   module.exports = router;

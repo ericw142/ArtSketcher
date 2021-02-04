@@ -12,7 +12,10 @@ const API = {
     },
     getPosts: function() {
         return axios.get("/api/home");
+    },
+    getUserPost: function() {
+       return axios.get("/api/userPost/:username");
     }
-};
+};  
 
 export default API;

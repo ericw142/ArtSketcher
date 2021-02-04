@@ -95,7 +95,7 @@ return (
                 <input type="range" id="width" min="1" max="30"></input>
                 <h6>Description</h6>
                 <textarea id="textInput"></textarea>
-                <button className="btn btn-secondary" onClick={logCanvas}>Save your Drawing</button>
+                <button className="btn btn-primary" onClick={logCanvas} style={{ width : '100px'}}>Save</button>
             </div>
         </div>
     </div>
