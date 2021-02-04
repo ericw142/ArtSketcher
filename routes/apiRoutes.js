@@ -57,7 +57,7 @@ Profile.find({}).sort({date: -1})
       });
   });
 
-
+// Post display on homepage
 router.get("/home", (req, res) => {
 Post.find({}).sort({date: -1})
       .then(dbPost => {
@@ -67,16 +67,27 @@ Post.find({}).sort({date: -1})
         res.status(404).json(err);
       });
   });
-
+// Post display on profile page
   router.get("/userPost/:username", (req, res) => {
-    console.log(req.params.username)
-    // Post.find({"user":req.data.username}).sort({date: -1})
-    //       .then(dbPost => {
-    //         res.json(dbPost);
-    //       })
-    //       .catch(err => {
-    //         res.status(404).json(err);
-    //       });
+    let searchUsername = req.params.username;
+    Post.find({"user": searchUsername}).sort({date: -1})
+          .then(dbPost => {
+            res.json(dbPost);
+          })
+          .catch(err => {
+            res.status(404).json(err);
+          });
       });
+    
+  router.delete("/deletePost/:id", (req, res) => {
+    let searchid = req.params.id;
+    Post.deleteOne({_id: searchid})
+    .then(result => {
+      res.json(result);
+    })
+    .catch(err => {
+      res.status(404).json(err);
+    })
+  })
 
   module.exports = router;

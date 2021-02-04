@@ -3,8 +3,10 @@ import Context from "../utils/Context";
 import Paper from 'paper';
 import Sketch from './Sketch';
 import API from '../utils/API';
+import { withRouter } from 'react-router';
 
 const Canvas = props => {
+  
     const [context] = useContext(Context);
     const canvasRef = useRef(null)
     let width;
@@ -69,7 +71,7 @@ const Canvas = props => {
 
         API.savedPost({image, user, text})
             .then(res => {
-                alert("Image saved!");
+                // props.withRouter.push('/profile');
             })
             .catch(err => console.log(err));
     };
@@ -103,4 +105,4 @@ return (
     
 }
 
-export default Canvas;
+export default withRouter(Canvas);
