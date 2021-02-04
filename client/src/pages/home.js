@@ -8,14 +8,13 @@ function Home(props) {
   return (
     <div className="card">
       
-      <header className="card-header">
-      <div className="card-header-content profile-info">
-      <div class="card-header text-center">
+    <header className="card-header">
+    <div class="card-header text-center">
     <h2>Drawings Wall</h2>
   </div>
-      <div className="col-md-10"></div>
+      <div className="col-md-9"></div>
       <PostDisplay />
-      </div>
+      
       </header>
     </div>
   );

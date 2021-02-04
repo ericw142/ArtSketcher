@@ -3,7 +3,8 @@ import ReactDOM from "react-dom";
 import { Link, useLocation} from "react-router-dom";
 import Canvas from "../components/Canvas";
 import Context from "../utils/Context";
-
+import PostDisplay from "../components/PostDisplay";
+import UserPost from "../components/userPost";
 
 function Profile(props) {
   const [context, setContext] = useContext(Context);
@@ -16,42 +17,62 @@ function Profile(props) {
     )
   }
   return (
-   <div className="container">
-    <div className="row">
-    <header className="card-header"> 
-    <div className="profile">
-    <div class="col-md-10">   
-    <div className="card">
-     <div className="card-body">
-    <div className="card-header-content profile-info">
-      <div className="col-md-10">
-      <div className="panel">
-        <img className="pic img-circle" src="http://placehold.it/120x120" alt="..." />
-        <div className="name"><small>{context.username}</small></div>
-      </div>
-      
-    {/* {this.state.following_num} */}
-      <div className="stats">
-            <ul>
-                <li><span className="post_num"></span> posts</li>
-                <li><span className="follower_num"></span> followers</li>
-                <li><span className="following_num"></span> following</li>
-            </ul>
-      </div>
-      <p>Description</p>
-      </div>
-      </div>
+  <div className="jumbotron">
+  <div className="container">
+  <div className="row">
+  <div className="col-md-6">  
+  <div className="card border-secondary bg-light mb-3">
+  <div className="card-body">
+  
+  <div className="panel">
+    <img className="pic img-circle" src="http://placehold.it/120x120" alt="..." />
+  <hr></hr>  
+    <div className="name">Username:<h2>{context.username}</h2></div>
+  </div>
+  <hr></hr>
+{/* {this.state.following_num} */}
+
+  <div className="stats">
+        <ul>
+            <li><span className="post_num"></span> posts</li>
+        </ul>
+  </div>
+  
+  {/* <h3>Bio</h3 > */}
+  </div>
+  <h5 class="text-center">User's Drawings</h5>
+  <hr/>
+  <div class="card-body text-secondary">
+  <UserPost />
+  </div>
+  
+    </div>
+    
+    </div>
+    <div className="col-md-6 ml-auto">
      
-     </div>
-     </div>
-     <div className="card-content">
-        <Canvas />
-      </div> 
+     <div className="card border-secondary bg-light mb-3 text-center">
+     <h5 className="card-title text-center">Draw your Sketch!</h5> 
+     <hr></hr> 
+     <div className="card-body text-secondary">
+    <Canvas />
+    </div> 
     </div>
+   
+    
+    
     </div>
-    </header> 
-   </div> 
-   </div>
+
+    </div>
+    
+    <br></br>
+    
+    
+     
+     <br></br>
+     
+    </div> 
+    </div>                                                     
   );
 }
 
