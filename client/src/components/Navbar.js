@@ -35,13 +35,6 @@ function Navbar() {
             Login
           </Link>
         </li>
-        <li className="nav-item">
-          <Link
-            to="/logout"
-            className={location.pathname === "/login" ? "nav-link" : "nav-link"} style={{ color : 'white'}} >
-            Logout
-          </Link>
-        </li>
         </ul>
         
     
