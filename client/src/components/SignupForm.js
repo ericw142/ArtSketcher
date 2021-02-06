@@ -9,8 +9,15 @@ class SignupForm extends Component {
 
     successDisplay = () => {
         if (this.state.signedUp) {
-            return <p>You have successfully signed up! Please use the login above.</p>;
-        }
+            return(
+            <div className="jumbotron">
+            <div className="container">
+            <div className="row justify-content-md-center">
+            <p>You have successfully signed up! Please use the login above.</p>;
+            </div>
+            </div>
+            </div>
+            )}
         else {
             return;
         }

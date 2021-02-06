@@ -21,16 +21,17 @@ class Login extends Component {
 
   render() {
     return (
-      <div className="card">
-      <div className="text-center">
+      <div className="jumbotron">
+          
+      
           <LoginForm />
           <br />
-        <h2 className="text-center">Don't have an account? Click here to sign up.</h2>
-        <button className="btn btn-primary text-center" onClick={this.handleFormDisplay}>Sign Up</button>
-          <br />
+        <h2 className="text-center">Don't have an account? Click here to sign up.
+        <button className="btn btn-primary text-center" onClick={this.handleFormDisplay}>Sign Up</button></h2>
+
         {this.renderForm()}
       </div>
-     </div> 
+     
     );
   }
 }

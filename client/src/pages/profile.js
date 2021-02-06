@@ -10,8 +10,12 @@ function Profile(props) {
 
   if (context.username === "") {
     return(
-      <div>
-        <h2>Please log in to start using ArtSketcher!</h2>
+      <div className="jumbotron">
+      <div className="container">
+      <div className="text-center">
+        <h2>Please log in to start using ArtSketcher!Or Register to start creaing new sketches!</h2>
+      </div>
+      </div>
       </div>
     )
   }
@@ -29,19 +33,10 @@ function Profile(props) {
     <div className="name">Username:<h2>{context.username}</h2></div>
   </div>
   <hr></hr>
-{/* {this.state.following_num} */}
-
-  <div className="stats">
-        <ul>
-            <li><span className="post_num"></span> posts</li>
-        </ul>
-  </div>
   
-  {/* <h3>Bio</h3 > */}
   </div>
-  <h5 class="text-center">User's Drawings</h5>
-  <hr/>
-  <div class="card-body text-secondary">
+  <div class="card-header text-center"><h5>{context.username}'s Drawings</h5></div>
+  <div class="card-body bg-dark mb-3">
   <UserPost />
   </div>
   
@@ -51,8 +46,8 @@ function Profile(props) {
     <div className="col-md-6 ml-auto">
      
      <div className="card border-secondary bg-light mb-3 text-center">
-     <h5 className="card-title text-center">Draw your Sketch!</h5> 
-     <hr></hr> 
+     <div class="card-header text-center"><h5>Draw your Sketch!</h5></div> 
+     
      <div className="card-body text-secondary">
     <Canvas />
     </div> 

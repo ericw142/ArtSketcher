@@ -6,9 +6,14 @@ function Logout() {
     }
 
     return(
+        <div className="jumbotron">
         <div className="container">
+            <div className="row justify-content-md-center">
             <h3>Are you sure you want to logout?</h3>
-            <button onClick={logout}>Yes</button>
+            <button className="btn btn-primary" onClick={logout}>Yes</button>
+            <button className="btn btn-primary"onClick={logout}>No</button>
+        </div>
+        </div>
         </div>
     )
 }
