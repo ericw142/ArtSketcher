@@ -1,9 +1,11 @@
 import React, { useContext } from "react";
 import Context from "../utils/Context";
 import API from "../utils/API";
+import { useHistory } from "react-router-dom";
 
 function Sform(props) {
     const [context] = useContext(Context);
+    const history = useHistory();
 
     const submitSignupForm = event => {
         event.preventDefault();
@@ -20,6 +22,7 @@ function Sform(props) {
             } else {
                 context.username = username;
                 alert("Successfully signed up!")
+                history.push("/profile");
             }
         })
         .catch(err => console.log(err));

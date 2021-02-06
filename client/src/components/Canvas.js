@@ -3,12 +3,12 @@ import Context from "../utils/Context";
 import Paper from 'paper';
 import Sketch from './Sketch';
 import API from '../utils/API';
-import { withRouter } from 'react-router';
+import { useHistory } from "react-router-dom";
 
 const Canvas = props => {
-  
     const [context] = useContext(Context);
     const canvasRef = useRef(null)
+    const history = useHistory();
     let width;
 
     useEffect(() => {
@@ -71,12 +71,11 @@ const Canvas = props => {
 
         API.savedPost({image, user, text})
             .then(res => {
-                // props.withRouter.push('/profile');
+                history.push("/");
+                history.push("/profile");
             })
             .catch(err => console.log(err));
     };
-
-
 
 return (
     <div className="container">
@@ -105,4 +104,4 @@ return (
     
 }
 
-export default withRouter(Canvas);
+export default Canvas;

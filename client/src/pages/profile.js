@@ -1,12 +1,14 @@
-import React, {useEffect, useContext} from "react";
-import ReactDOM from "react-dom";
-import { Link, useLocation} from "react-router-dom";
+import React, { useContext} from "react";
 import Canvas from "../components/Canvas";
 import Context from "../utils/Context";
 import UserPost from "../components/userPost";
 
 function Profile(props) {
-  const [context, setContext] = useContext(Context);
+  const [context] = useContext(Context);
+
+  const logout = () => {
+    window.location.replace('/')
+  }
 
   if (context.username === "") {
     return(
@@ -22,24 +24,26 @@ function Profile(props) {
   <div className="col-md-6">  
   <div className="card border-secondary bg-light mb-3">
   <div className="card-body">
-  
+  {/* User Info */}
   <div className="panel">
-    <img className="pic img-circle" src="http://placehold.it/120x120" alt="..." />
-  <hr></hr>  
+    {/* <img className="pic img-circle" src="http://placehold.it/120x120" alt="..." /> */}
+  {/* <hr></hr>   */}
     <div className="name">Username:<h2>{context.username}</h2></div>
   </div>
   <hr></hr>
 {/* {this.state.following_num} */}
 
   <div className="stats">
-        <ul>
-            <li><span className="post_num"></span> posts</li>
-        </ul>
+        <div className="row">
+          <div className="col-md-6">
+            <button onClick={logout}>Logout</button>
+          </div>
+        </div>
   </div>
   
   {/* <h3>Bio</h3 > */}
   </div>
-  <h5 class="text-center">User's Drawings</h5>
+  <h5 class="text-center">{context.username}'s Drawings</h5>
   <hr/>
   <div class="card-body text-secondary">
   <UserPost />
@@ -48,6 +52,7 @@ function Profile(props) {
     </div>
     
     </div>
+    {/* Canvas Section */}
     <div className="col-md-6 ml-auto">
      
      <div className="card border-secondary bg-light mb-3 text-center">

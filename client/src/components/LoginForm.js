@@ -1,10 +1,11 @@
 import React, { useContext } from "react";
-// import {Redirect} from "react-router-dom";
+import { useHistory } from "react-router-dom";
 import Context from "../utils/Context";
 import API from "../utils/API";
 
 function LoginForm(props){
     const [context] = useContext(Context);
+    const history = useHistory();
 
     const submitLoginForm = event => {
        event.preventDefault();
@@ -20,7 +21,7 @@ function LoginForm(props){
                 alert("Your username or password are incorrect.")
             } else {
                 context.username = res.data.user;
-                alert("Logged In!");
+                history.push("/profile");
             }  
        })
        .catch(err => console.log(err));
