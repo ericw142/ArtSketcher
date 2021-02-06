@@ -41,8 +41,9 @@ class PostDisplay extends Component {
             )
         }
         return(
-            <div className="marginTop">
-                 <input
+            <div className="MarginTop">
+                <div className="row justify-content-md-center">
+                <input
                     value={this.state.search}
                     onChange={this.handleInputChange}
                     autoComplete='off'
@@ -52,8 +53,8 @@ class PostDisplay extends Component {
                     placeholder="Search by name"
                     id="search"
                 />
-                <div className="row" style={{ textAlign : 'center;'}}>
                 {this.state.posts.map(post => (<Post image={post.image} user={post.user} text={post.text} id={post._id} key={post._id}/>))}
+                
                 </div>
             </div>
         )

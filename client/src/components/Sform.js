@@ -29,11 +29,11 @@ function Sform(props) {
     };
     return(
         <div className="container">
-                <div className="row">
+                <div className="row justify-content-md-center">
                 <div class="card card-signin my-5">
                 <div class="card-body">
                 <h5 class="card-title text-center">Sign Up</h5>
-
+                <hr/>
                 <form className="signup" onSubmit={submitSignupForm}>
                     <div className="form-group">  
                     <label htmlFor="username">Username</label>  

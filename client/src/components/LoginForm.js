@@ -29,8 +29,8 @@ function LoginForm(props){
    
     return(
         <div className="container">
-                <div className="row">
-                <div className="card card-signin my-5">
+                <div className="row justify-content-md-center">
+                <div className="card card-signin my-7">
                 <div className="card-body">
                 <h5 className="card-title text-center">Sign In</h5>
                 <hr/>  

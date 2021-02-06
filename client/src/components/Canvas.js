@@ -67,7 +67,7 @@ const Canvas = props => {
         canvas.src = image;
 
         let user = context.username;
-        let text = document.getElementById("textInput").value;
+        let text = document.getElementById("exampleFormControlTextarea6").value;
 
         API.savedPost({image, user, text})
             .then(res => {
@@ -81,7 +81,7 @@ return (
     <div className="container">
         <div className="row">
             <div className="text-center">
-                <canvas ref={canvasRef} {...props} id='paper-canvas' height="200" width="400" resize='true' />
+                <canvas ref={canvasRef} {...props} id='paper-canvas' height="200" width="480" resize='true' />
                 {/* Drawing Tools */}
                 <button className="colorButtons" id="red" onClick={red}></button>
                 <button className="colorButtons" id="orange" onClick={orange}></button>
@@ -94,8 +94,10 @@ return (
                 <button className="colorButtons" id="black" onClick={black}></button>
                 <button className="colorButtons" id="white" onClick={white}></button>
                 <input type="range" id="width" min="1" max="30"></input>
-                <h6>Description</h6>
-                <textarea id="textInput"></textarea>
+                <div class="form-group shadow-textarea">
+                <label for="exampleFormControlTextarea6"></label>
+                <textarea class="form-control z-depth-1" id="exampleFormControlTextarea6" rows="3" placeholder="Write something here..."></textarea>
+                </div>
                 <button className="btn btn-primary" onClick={logCanvas} style={{ width : '100px'}}>Save</button>
             </div>
         </div>
