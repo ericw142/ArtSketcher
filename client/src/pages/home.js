@@ -5,13 +5,12 @@ function Home(props) {
 
   return (
     <div className="jumbotron">
-    {/* <div class="container"> */}
-    <div class="row justify-content-md-center">
-    <div class="col col-md-6"> 
+    <div className="row justify-content-md-center">
+    <div className="col col-md-9"> 
     <div className="card border-secondary bg-light mb-3">
-    <div class="card-header text-center"><h2>Drawings Wall</h2></div>
-    <div className="card-body bg-dark mb-3">
-    
+    <div className="card-header text-center"><h1 className="display-2">Drawings Wall</h1></div>
+
+    <div className="card-body mb-3 sketchy">
     <PostDisplay />
     </div>
     </div>

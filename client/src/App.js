@@ -15,10 +15,10 @@ function App() {
   return (
 
       <Router>
-        <div className="App">
-          <Navbar />
+        <div className="App"> 
           
             <Context.Provider value={[context, setContext]}>
+                  <Navbar />
                   <Route exact path="/" component={Home} />
                   <Route exact path="/login" component={Login} />
                   <Route exact path="/profile" component={Profile}/>
