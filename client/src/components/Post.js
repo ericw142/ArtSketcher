@@ -3,17 +3,15 @@ import React from "react";
 function Post(props) {
     return(
         
-        <div className="col-md-5">  
-        <div className="card post border-secondary mb-3 text-center">
-        <div class="card-header text-center"><h5>{props.user}'s Post</h5></div>
-            <img src={props.image}></img>
+        <div className="col-md-5 post">  
+        <div className="card post mb-3 text-center">
+        <div className="card-header text-center"><h6>{props.user}'s Post</h6></div>
+            <img className='postImage' src={props.image} alt="userPost"></img>
             
             
-            <div className="card-body">
-            <div class="card-footer">
-            <p className="text-muted">{props.text}</p>  
+            <div className="card-body postBody">
+                <p className="text-muted">{props.text}</p>  
             </div>
-        </div>
        </div> 
        </div>
        

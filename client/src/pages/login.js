@@ -8,13 +8,22 @@ class Login extends Component {
   };
 
   handleFormDisplay = () => {
-    this.setState({currentForm: "signup"})
+    if (this.state.currentForm === "signup") {
+      this.setState({currentForm: ""});
+      return;
+    }
+    this.setState({currentForm: "signup"});
   };
 
   renderForm = () => {
     if (this.state.currentForm === "signup") {
       return (
         <SignupForm />
+      )
+    }
+    else {
+      return(
+        <div></div>
       )
     }
   }
