@@ -1,4 +1,4 @@
-import React, {Component, useEffect} from "react";
+import React, {Component} from "react";
 import Context from "../utils/Context";
 import ProfilePost from "./ProfilePost";
 import axios from "axios";

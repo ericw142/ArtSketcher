@@ -15,6 +15,9 @@ const API = {
     },
     getUserPost: function() {
        return axios.get("/api/userPost/:username");
+    },
+    findAllUsers: function() {
+        return axios.get("/api/findAllUsers");
     }
 };  
 

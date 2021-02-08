@@ -23,7 +23,7 @@ function Profile(props) {
   if (context.icon === "EmojiSunglassesFill") {
     return(
       <div className="jumbotron">
-          <div className="container d-flex">
+          <div className="container">
           <div className="row">
             <div className="col-md-6 UserDiv">  
             <div className="card border-secondary bg-light mb-3">
@@ -46,7 +46,7 @@ function Profile(props) {
             </div>
             
             </div>
-            <div className="card-header text-center"><h5>{context.username}'s Drawings</h5></div>
+            <div className="card-header text-center"><h5>{context.username}'s sketches</h5></div>
             <div className="card-body sketchy mb-3">
             <UserPost />
             </div>
@@ -58,7 +58,7 @@ function Profile(props) {
             <div className="col-md-6 ml-auto CanvasDiv">
             
             <div className="card border-secondary bg-light mb-3 text-center">
-            <div className="card-header text-center"><h5>Draw your Sketch!</h5></div> 
+            <div className="card-header text-center"><h5 className="display-4">Draw your Sketch!</h5></div> 
             
             <div className="card-body text-secondary paletteCard">
             <Canvas />
@@ -81,9 +81,9 @@ function Profile(props) {
   if (context.icon === "EmojiExpressionlessFill") {
     return(
         <div className="jumbotron">
-            <div className="container d-flex">
+            <div className="container">
             <div className="row">
-            <div className="col-md-6 UserDiv">  
+            <div className="col-md-6">  
             <div className="card border-secondary bg-light mb-3">
             <div className="card-body">
             {/* User Info */}
@@ -103,7 +103,7 @@ function Profile(props) {
             </div>
             
             </div>
-            <div className="card-header text-center"><h5>{context.username}'s Drawings</h5></div>
+            <div className="card-header text-center"><h5>{context.username}'s sketches</h5></div>
             <div className="card-body sketchy mb-3">
             <UserPost />
             </div>
@@ -112,10 +112,10 @@ function Profile(props) {
               
               </div>
               {/* Canvas Section */}
-              <div className="col-md-6 ml-auto CanvasDiv">
+              <div className="col-md-6 ml-auto ">
               
               <div className="card border-secondary bg-light mb-3 text-center">
-              <div className="card-header text-center"><h5>Draw your Sketch!</h5></div> 
+              <div className="card-header text-center"><h5 className="display-4">Draw your Sketch!</h5></div> 
               
               <div className="card-body text-secondary paletteCard">
               <Canvas />
@@ -138,9 +138,9 @@ function Profile(props) {
   if (context.icon === "EmojiDizzyFill") {
     return(
         <div className="jumbotron">
-            <div className="container d-flex">
+            <div className="container">
             <div className="row">
-            <div className="col-md-6 UserDiv">  
+            <div className="col-md-6">  
             <div className="card border-secondary bg-light mb-3">
             <div className="card-body">
             {/* User Info */}
@@ -160,7 +160,7 @@ function Profile(props) {
             </div>
             
             </div>
-            <div className="card-header text-center"><h5>{context.username}'s Drawings</h5></div>
+            <div className="card-header text-center"><h5>{context.username}'s sketches</h5></div>
             <div className="card-body sketchy mb-3">
             <UserPost />
             </div>
@@ -169,10 +169,10 @@ function Profile(props) {
               
               </div>
               {/* Canvas Section */}
-              <div className="col-md-6 ml-auto CanvasDiv">
+              <div className="col-md-6 ml-auto">
               
               <div className="card border-secondary bg-light mb-3 text-center">
-              <div className="card-header text-center"><h5>Draw your Sketch!</h5></div> 
+              <div className="card-header text-center"><h5 className="display-4">Draw your Sketch!</h5></div> 
               
               <div className="card-body text-secondary paletteCard">
               <Canvas />
@@ -214,7 +214,7 @@ function Profile(props) {
   </div>
   
   </div>
-  <div className="card-header text-center"><h5>{context.username}'s Drawings</h5></div>
+  <div className="card-header text-center"><h5>{context.username}'s sketches</h5></div>
   <div className="card-body sketchy mb-3">
   <UserPost />
   </div>
@@ -226,7 +226,7 @@ function Profile(props) {
     <div className="col-md-6 ml-auto">
      
      <div className="card border-secondary bg-light mb-3 text-center">
-     <div className="card-header text-center"><h5>Draw your Sketch!</h5></div> 
+     <div className="card-header text-center"><h5 className="display-4">Draw your Sketch!</h5></div> 
      
      <div className="card-body text-secondary paletteCard">
     <Canvas />

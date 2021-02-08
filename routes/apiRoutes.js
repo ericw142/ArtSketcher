@@ -1,7 +1,7 @@
 const router = require("express").Router();
 const Profile = require("../models/profile");
 const Post = require("../models/posts");
-const { json } = require("express");
+const User = require("../models/user");
 
 //profile 
 router.post("/profile", ({body}, res) => {
@@ -82,6 +82,28 @@ Post.find({}).sort({date: -1})
   router.delete("/deletePost/:id", (req, res) => {
     let searchid = req.params.id;
     Post.deleteOne({_id: searchid})
+    .then(result => {
+      res.json(result);
+    })
+    .catch(err => {
+      res.status(404).json(err);
+    })
+  })
+
+  // Users
+  router.get("/findAllUsers", (req, res) => {
+    User.find({})
+    .then(result => {
+      res.json(result);
+    })
+    .catch(err => {
+      res.status(404).json(err);
+    })
+  })
+
+  router.get("/userDataSearch/:searchName", (req, res) => {
+    let search = req.params.searchName
+    Post.find({user: search})
     .then(result => {
       res.json(result);
     })
