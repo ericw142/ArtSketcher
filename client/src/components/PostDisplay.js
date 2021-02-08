@@ -35,7 +35,7 @@ class PostDisplay extends Component {
     }
 
     render() {
-        if (!this.state.posts) {
+        if (this.state.posts.length === 0) {
             return(
                 <div></div>
             )
