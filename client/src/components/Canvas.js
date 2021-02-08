@@ -81,21 +81,24 @@ return (
     <div className="container">
         <div className="row">
             <div className="text-center">
-                <canvas ref={canvasRef} {...props} id='paper-canvas' height="200" width="480" resize='true' />
+                <canvas ref={canvasRef} {...props} id='paper-canvas' resize="true" />
                 {/* Drawing Tools */}
-                <button className="colorButtons" id="red" onClick={red}></button>
-                <button className="colorButtons" id="orange" onClick={orange}></button>
-                <button className="colorButtons" id="yellow" onClick={yellow}></button>
-                <button className="colorButtons" id="green" onClick={green}></button>
-                <button className="colorButtons" id="blue" onClick={blue}></button>
-                <button className="colorButtons" id="purple" onClick={purple}></button>
-                <button className="colorButtons" id="pink" onClick={pink}></button>
-                <button className="colorButtons" id="brown" onClick={brown}></button>
-                <button className="colorButtons" id="black" onClick={black}></button>
-                <button className="colorButtons" id="white" onClick={white}></button>
+                <div id="palette">
+                    <button className="colorButtons" id="red" onClick={red}></button>
+                    <button className="colorButtons" id="orange" onClick={orange}></button>
+                    <button className="colorButtons" id="yellow" onClick={yellow}></button>
+                    <button className="colorButtons" id="green" onClick={green}></button>
+                    <button className="colorButtons" id="blue" onClick={blue}></button>
+                    <button className="colorButtons" id="purple" onClick={purple}></button>
+                    <button className="colorButtons" id="pink" onClick={pink}></button>
+                    <button className="colorButtons" id="brown" onClick={brown}></button>
+                    <button className="colorButtons" id="black" onClick={black}></button>
+                    <button className="colorButtons" id="white" onClick={white}></button>
+                </div>
+                
                 <input type="range" id="width" min="1" max="30"></input>
                 <div class="form-group shadow-textarea">
-                <label for="exampleFormControlTextarea6"></label>
+                <label htmlFor="exampleFormControlTextarea6"></label>
                 <textarea class="form-control z-depth-1" id="exampleFormControlTextarea6" rows="3" placeholder="Write something here..."></textarea>
                 </div>
                 <button className="btn btn-primary" onClick={logCanvas} style={{ width : '100px'}}>Save</button>

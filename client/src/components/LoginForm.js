@@ -21,6 +21,7 @@ function LoginForm(props){
                 alert("Your username or password are incorrect.")
             } else {
                 context.username = res.data.user;
+                context.icon = res.data.icon;
                 history.push("/profile");
             }  
        })

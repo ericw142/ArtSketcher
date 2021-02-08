@@ -20,7 +20,7 @@ module.exports = {
                   res.json({success: false, message: err}); 
                 }else{
                   console.log('success');
-                  res.json({success:true, message:"Authentication successful", user: user.username }); 
+                  res.json({success:true, message:"Authentication successful", user: user.username, icon: user.icon }); 
                 } 
               }) 
             } 

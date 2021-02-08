@@ -7,7 +7,7 @@ const userController = require("../../controllers/userController");
 const User = require('../user');
 
 router.post("/signup", (req, res) => {
-    Users=new User({email: req.body.email, username : req.body.username}); 
+    Users=new User({email: req.body.email, username : req.body.username, icon: req.body.icon}); 
         User.register(Users, req.body.password, function(err, user) { 
             if (err) { 
               res.json({success:false, message:"Your account could not be saved. Error: ", err})  

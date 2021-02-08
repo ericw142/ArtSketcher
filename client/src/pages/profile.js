@@ -2,13 +2,10 @@ import React, { useContext} from "react";
 import Canvas from "../components/Canvas";
 import Context from "../utils/Context";
 import UserPost from "../components/userPost";
+import { EmojiSunglassesFill, EmojiExpressionlessFill, EmojiDizzyFill } from "react-bootstrap-icons";
 
 function Profile(props) {
   const [context] = useContext(Context);
-
-  const logout = () => {
-    window.location.replace('/')
-  }
 
   if (context.username === "") {
     return(
@@ -21,6 +18,181 @@ function Profile(props) {
       </div>
     )
   }
+
+  // Conditional Rendering of Icons
+  if (context.icon === "EmojiSunglassesFill") {
+    return(
+      <div className="jumbotron">
+          <div className="container d-flex">
+          <div className="row">
+            <div className="col-md-6 UserDiv">  
+            <div className="card border-secondary bg-light mb-3">
+            <div className="card-body">
+            {/* User Info */}
+            <div className="panel">
+            <EmojiSunglassesFill color="darkslategray" size={30}/>
+              
+              <div className="name"><h2>{context.username}</h2></div>
+            
+            </div>
+            <hr></hr>
+        
+            <div className="stats">
+                  <div className="row">
+                    <div className="col-md-6">
+                     
+                    </div>
+                  </div>
+            </div>
+            
+            </div>
+            <div className="card-header text-center"><h5>{context.username}'s Drawings</h5></div>
+            <div className="card-body sketchy mb-3">
+            <UserPost />
+            </div>
+            
+              </div>
+              
+              </div>
+            {/* Canvas Section */}
+            <div className="col-md-6 ml-auto CanvasDiv">
+            
+            <div className="card border-secondary bg-light mb-3 text-center">
+            <div className="card-header text-center"><h5>Draw your Sketch!</h5></div> 
+            
+            <div className="card-body text-secondary paletteCard">
+            <Canvas />
+            </div> 
+            </div>
+          
+            </div>
+        
+            </div>
+            
+            <br></br>
+            
+            <br></br>
+            
+            </div> 
+      </div> 
+    )
+  }
+
+  if (context.icon === "EmojiExpressionlessFill") {
+    return(
+        <div className="jumbotron">
+            <div className="container d-flex">
+            <div className="row">
+            <div className="col-md-6 UserDiv">  
+            <div className="card border-secondary bg-light mb-3">
+            <div className="card-body">
+            {/* User Info */}
+            <div className="panel">
+            <EmojiExpressionlessFill color="darkslategray" size={30} />
+
+            <div className="name"><h2>{context.username}</h2></div>
+            </div>
+            <hr></hr>
+          
+            <div className="stats">
+                  <div className="row">
+                    <div className="col-md-6">
+                     
+                    </div>
+                  </div>
+            </div>
+            
+            </div>
+            <div className="card-header text-center"><h5>{context.username}'s Drawings</h5></div>
+            <div className="card-body sketchy mb-3">
+            <UserPost />
+            </div>
+            
+              </div>
+              
+              </div>
+              {/* Canvas Section */}
+              <div className="col-md-6 ml-auto CanvasDiv">
+              
+              <div className="card border-secondary bg-light mb-3 text-center">
+              <div className="card-header text-center"><h5>Draw your Sketch!</h5></div> 
+              
+              <div className="card-body text-secondary paletteCard">
+              <Canvas />
+              </div> 
+              </div>
+            
+              </div>
+          
+              </div>
+              
+              <br></br>
+              
+              <br></br>
+              
+              </div> 
+        </div> 
+    )
+  }
+
+  if (context.icon === "EmojiDizzyFill") {
+    return(
+        <div className="jumbotron">
+            <div className="container d-flex">
+            <div className="row">
+            <div className="col-md-6 UserDiv">  
+            <div className="card border-secondary bg-light mb-3">
+            <div className="card-body">
+            {/* User Info */}
+            <div className="panel">
+            <EmojiDizzyFill color="darkslategray" size={30} />
+
+            <div className="name"><h2>{context.username}</h2></div>
+            </div>
+            <hr></hr>
+          
+            <div className="stats">
+                  <div className="row">
+                    <div className="col-md-6">
+                      
+                    </div>
+                  </div>
+            </div>
+            
+            </div>
+            <div className="card-header text-center"><h5>{context.username}'s Drawings</h5></div>
+            <div className="card-body sketchy mb-3">
+            <UserPost />
+            </div>
+            
+              </div>
+              
+              </div>
+              {/* Canvas Section */}
+              <div className="col-md-6 ml-auto CanvasDiv">
+              
+              <div className="card border-secondary bg-light mb-3 text-center">
+              <div className="card-header text-center"><h5>Draw your Sketch!</h5></div> 
+              
+              <div className="card-body text-secondary paletteCard">
+              <Canvas />
+              </div> 
+              </div>
+            
+              </div>
+          
+              </div>
+              
+              <br></br>
+              
+              <br></br>
+              
+              </div> 
+        </div> 
+    )
+  }
+
+// If username is recognized and icon is not
   return (
   <div className="jumbotron">
   <div className="container">
@@ -30,24 +202,20 @@ function Profile(props) {
   <div className="card-body">
   {/* User Info */}
   <div className="panel">
-    {/* <img className="pic img-circle" src="http://placehold.it/120x120" alt="..." /> */}
-  {/* <hr></hr>   */}
-    <div className="name">Username:<h2>{context.username}</h2></div>
   </div>
   <hr></hr>
-{/* {this.state.following_num} */}
 
   <div className="stats">
         <div className="row">
           <div className="col-md-6">
-            <button onClick={logout}>Logout</button>
+            
           </div>
         </div>
   </div>
   
   </div>
-  <div class="card-header text-center"><h5>{context.username}'s Drawings</h5></div>
-  <div class="card-body bg-dark mb-3">
+  <div className="card-header text-center"><h5>{context.username}'s Drawings</h5></div>
+  <div className="card-body sketchy mb-3">
   <UserPost />
   </div>
   
@@ -58,22 +226,18 @@ function Profile(props) {
     <div className="col-md-6 ml-auto">
      
      <div className="card border-secondary bg-light mb-3 text-center">
-     <div class="card-header text-center"><h5>Draw your Sketch!</h5></div> 
+     <div className="card-header text-center"><h5>Draw your Sketch!</h5></div> 
      
-     <div className="card-body text-secondary">
+     <div className="card-body text-secondary paletteCard">
     <Canvas />
     </div> 
     </div>
    
-    
-    
     </div>
 
     </div>
     
     <br></br>
-    
-    
      
      <br></br>
      
