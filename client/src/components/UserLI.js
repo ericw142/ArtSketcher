@@ -12,7 +12,7 @@ function UserLI(props) {
         })
         .catch(err => console.log(err));
     }
-
+    
     return(
         <li className="UserLI" onClick={searchPosts}>
             {props.username}

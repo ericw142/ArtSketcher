@@ -71,10 +71,13 @@ const Canvas = props => {
 
         API.savedPost({image, user, text})
             .then(res => {
+            
                 history.push("/");
                 history.push("/profile");
             })
-            .catch(err => console.log(err));
+            .catch(err => {
+                alert("We're sorry, your image is too complex!");
+            });
     };
 
 return (

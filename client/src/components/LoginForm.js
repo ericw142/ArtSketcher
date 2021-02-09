@@ -16,7 +16,6 @@ function LoginForm(props){
        API.login({username, password})
        .then(res => {
 
-           console.log(res.data);
             if (res.data.success === false) {
                 alert("Your username or password are incorrect.")
             } else {
