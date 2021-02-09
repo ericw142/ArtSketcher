@@ -142,3 +142,11 @@ svg {
 #white {
     background-color: white;
 }
+
+.userListCard {
+    
+}
+
+.userDisplay {
+    background-color:rgba(0, 0, 0, 0.03);
+}
