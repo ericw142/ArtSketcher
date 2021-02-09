@@ -28,7 +28,13 @@ passport.deserializeUser(User.deserializeUser());
 app.use(passport.initialize()); 
 app.use(passport.session()); 
 
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/artsketcher_db", { useUnifiedTopology: true, useNewUrlParser: true, useCreateIndex: true });
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/artsketcher_db",
+ { 
+    useUnifiedTopology: true, 
+    useNewUrlParser: true, 
+    useCreateIndex: true, 
+    useFindAndModify: false 
+  });
 
 // Routing
 app.use("/user", userRoutes);
