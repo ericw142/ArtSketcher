@@ -1,6 +1,7 @@
 # ArtSketcher
 ![License](https://img.shields.io/badge/License-APACHE2.0-blue.svg)<br />
 
+![Screenshot 2021-02-09 200714](https://user-images.githubusercontent.com/49447293/107465909-3879ad80-6b31-11eb-91ce-34a50e0bca99.png)
 
 
 ## Overview
