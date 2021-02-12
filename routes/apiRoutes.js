@@ -92,7 +92,7 @@ Post.find({}).sort({date: -1})
 
   // Users
   router.get("/findAllUsers", (req, res) => {
-    User.find({})
+    User.find({}).sort({date: -1})
     .then(result => {
       res.json(result);
     })

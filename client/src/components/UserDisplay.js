@@ -29,9 +29,7 @@ class UserDisplay extends Component {
                 <div className="card-body userDisplay">
                 <h3 className="card-title">Current Users</h3>
                 <hr></hr>
-                {/* <ul id="userList"> */}
                     {this.state.users.map(user => (<UserLI username ={user.username}/>))}
-                {/* </ul> */}
                 </div>
             </div>
         )

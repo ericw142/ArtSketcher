@@ -33,9 +33,9 @@ function Sform(props) {
     return(
         <div className="container">
                 <div className="row justify-content-md-center">
-                <div class="card card-signin my-5">
-                <div class="card-body">
-                <h5 class="card-title text-center">Sign Up</h5>
+                <div className="card card-signin my-5">
+                <div className="card-body">
+                <h5 className="card-title text-center">Sign Up</h5>
                 <hr/>
                 <form className="signup" onSubmit={submitSignupForm}>
                     <div className="form-group">  
