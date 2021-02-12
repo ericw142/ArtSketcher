@@ -10,11 +10,17 @@ function Sform(props) {
 
     const submitSignupForm = event => {
         event.preventDefault();
-
-        let username = event.target.username.value;
+        let username = event.target.username.value.toString();
         let email = event.target.email.value;
         let password = event.target.password.value;
         let icon = event.target.icon.value;
+        
+        var regex = /\W|_/g
+        
+        if (regex.test(username)) {
+            alert("We're sorry. Your username cannot include special characters.");
+            return;
+        }
 
         API.signup({username, email, password, icon})
         .then(res => {

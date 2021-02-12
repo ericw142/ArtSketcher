@@ -12,6 +12,7 @@ class UserDisplay extends Component {
         .then(res => {
             let users = res.data;
             this.setState({users})
+            console.log(users);
         })
         .catch(err => console.log(err))
     }
@@ -29,7 +30,7 @@ class UserDisplay extends Component {
                 <div className="card-body userDisplay">
                 <h3 className="card-title">Current Users</h3>
                 <hr></hr>
-                    {this.state.users.map(user => (<UserLI username ={user.username}/>))}
+                    {this.state.users.map(user => (<UserLI key={user._id} username ={user.username}/>))}
                 </div>
             </div>
         )
