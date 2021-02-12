@@ -12,7 +12,7 @@ function Profile(props) {
       <div className="jumbotron">
       <div className="container">
       <div className="text-center">
-        <h2>Please log in to start using ArtSketcher!Or Register to start creaing new sketches!</h2>
+        <h2>Please log in or register to start drawing!</h2>
       </div>
       </div>
       </div>

@@ -31,12 +31,9 @@ class Login extends Component {
   render() {
     return (
       <div className="jumbotron">
-          
-      
           <LoginForm />
           <br />
-        <h2 className="text-center">Don't have an account? Click here to sign up.
-        <button className="btn btn-primary text-center" onClick={this.handleFormDisplay}>Sign Up</button></h2>
+        <h2 className="text-center">Don't have an account? <span><a href="#" className="primary text-center" onClick={this.handleFormDisplay}>Click Here</a></span> to sign up.</h2>
 
         {this.renderForm()}
       </div>
