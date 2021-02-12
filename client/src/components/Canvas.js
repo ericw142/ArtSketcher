@@ -100,9 +100,9 @@ return (
                 </div>
                 
                 <input type="range" id="width" min="1" max="30"></input>
-                <div class="form-group shadow-textarea">
+                <div className="form-group shadow-textarea">
                 <label htmlFor="exampleFormControlTextarea6"></label>
-                <textarea class="form-control z-depth-1" id="exampleFormControlTextarea6" rows="3" placeholder="Write something here..."></textarea>
+                <textarea className="form-control z-depth-1" id="exampleFormControlTextarea6" rows="3" placeholder="Write something here..."></textarea>
                 </div>
                 <button className="btn btn-primary" onClick={logCanvas} style={{ width : '100px'}}>Save</button>
             </div>
