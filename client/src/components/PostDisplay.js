@@ -43,18 +43,17 @@ class PostDisplay extends Component {
         return(
             <div className="MarginTop">
                 <div className="row justify-content-md-center">
-                <input
-                    value={this.state.search}
-                    onChange={this.handleInputChange}
-                    autoComplete='off'
-                    name="search"
-                    type="text"
-                    className="form-control"
-                    placeholder="Search by name"
-                    id="search"
-                />
-                {this.state.posts.map(post => (<Post image={post.image} user={post.user} text={post.text} id={post._id} key={post._id}/>))}
-                
+                    <input
+                        value={this.state.search}
+                        onChange={this.handleInputChange}
+                        autoComplete='off'
+                        name="search"
+                        type="text"
+                        className="form-control"
+                        placeholder="Search by name"
+                        id="search"
+                    />
+                    {this.state.posts.map(post => (<Post image={post.image} user={post.user} text={post.text} id={post._id} key={post._id}/>))} 
                 </div>
             </div>
         )

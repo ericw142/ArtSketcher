@@ -29,26 +29,30 @@ function LoginForm(props){
    
     return(
         <div className="container">
-                <div className="row justify-content-md-center">
+            <div className="row justify-content-md-center">
                 <div className="card card-signin my-7">
-                <div className="card-body">
-                <h5 className="card-title text-center">Sign In</h5>
-                <hr/>  
-                <form className="login" onSubmit={submitLoginForm}>
-                    <div className="form-group">
-                    
-                    <label htmlFor="loginUsername">Username</label>    
-                    <input type="text" name="loginUsername" className="form-control" placeholder="Username"></input>
+                    <div className="card-body">
+                    <h5 className="card-title text-center">Sign In</h5>
+                    <hr/>  
+
+                    <form className="login" onSubmit={submitLoginForm}>
+
+                        <div className="form-group">
+                        <label htmlFor="loginUsername">Username</label>    
+                        <input type="text" name="loginUsername" className="form-control" placeholder="Username"></input>
+                        </div>
+
+                        <div className="form-group">
+                        <label htmlFor="loginPassword">Password</label>
+                        <input type="password" name="loginPassword" className="form-control" placeholder="Password"></input>
+                        </div>
+                        
+                        <button type="submit" className="btn btn-md btn-primary">Login</button>
+                    </form>  
+
                     </div>
-                    <div className="form-group">
-                    <label htmlFor="loginPassword">Password</label>
-                    <input type="password" name="loginPassword" className="form-control" placeholder="Password"></input>
-                    </div>
-                    <button type="submit" className="btn btn-md btn-primary">Login</button>
-                </form>  
                 </div>
             </div>
-           </div>
         </div>  
     )    
 

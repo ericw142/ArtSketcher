@@ -39,44 +39,48 @@ function Sform(props) {
     return(
         <div className="container">
                 <div className="row justify-content-md-center">
-                <div className="card card-signin my-5">
-                <div className="card-body">
-                <h5 className="card-title text-center">Sign Up</h5>
-                <hr/>
-                <form className="signup" onSubmit={submitSignupForm}>
-                    <div className="form-group">  
-                    <label htmlFor="username">Username</label>  
-                    <input type="text" name="username" className="form-control" placeholder="Username"></input>
-                    </div>
-                    <div className="form-group">
-                    <label htmlFor="email">Email</label>
-                    <input type="email" name="email" className="form-control" placeholder="Email"></input>
-                    </div>
-                    <div className="form-group">
-                    <label htmlFor="password">Password</label>
-                    <input type="password" name="password" className="form-control" placeholder="Password"></input>
-                    </div>
-                    <div className="form-group">
-                        <label htmlFor="icon">Choose your user icon</label>
-                        <hr></hr>
-                        <div>
-                            <input className="marginTop marginRight" type="radio" name="icon" value="EmojiSunglassesFill"></input>
-                            <EmojiSunglassesFill color="darkslategray" size={30}/>
-                            <br></br>
-                            <input className="marginTop marginRight" type="radio" name="icon" value="EmojiExpressionlessFill"></input>
-                            <EmojiExpressionlessFill color="darkslategray" size={30}/>
-                            <br></br>
-                            <input className="marginTop marginRight" type="radio" name="icon" value="EmojiDizzyFill"></input>
-                            <EmojiDizzyFill color="darkslategray" size={30}/>
+                    <div className="card card-signin my-5">
+                    <div className="card-body">
+                    <h5 className="card-title text-center">Sign Up</h5>
+                    <hr/>
+
+                    <form className="signup" onSubmit={submitSignupForm}>
+                        <div className="form-group">  
+                        <label htmlFor="username">Username</label>  
+                        <input type="text" name="username" className="form-control" placeholder="Username"></input>
+                        </div>
+
+                        <div className="form-group">
+                        <label htmlFor="email">Email</label>
+                        <input type="email" name="email" className="form-control" placeholder="Email"></input>
+                        </div>
+
+                        <div className="form-group">
+                        <label htmlFor="password">Password</label>
+                        <input type="password" name="password" className="form-control" placeholder="Password"></input>
+                        </div>
+
+                        <div className="form-group">
+                            <label htmlFor="icon">Choose your user icon</label>
+                            <hr></hr>
+                            <div>
+                                <input className="marginTop marginRight" type="radio" name="icon" value="EmojiSunglassesFill"></input>
+                                <EmojiSunglassesFill color="darkslategray" size={30}/>
+                                <br></br>
+                                <input className="marginTop marginRight" type="radio" name="icon" value="EmojiExpressionlessFill"></input>
+                                <EmojiExpressionlessFill color="darkslategray" size={30}/>
+                                <br></br>
+                                <input className="marginTop marginRight" type="radio" name="icon" value="EmojiDizzyFill"></input>
+                                <EmojiDizzyFill color="darkslategray" size={30}/>
+                            </div>
+                            
                         </div>
                         
-                       
-                    </div>
-                    <button type="submit" className="btn btn-primary">Register</button>
-                </form> 
+                        <button type="submit" className="btn btn-primary">Register</button>
+                    </form> 
 
-                </div>
-                </div>
+                    </div>
+                    </div>
                 </div>
         </div>
     )

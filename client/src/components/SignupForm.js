@@ -11,11 +11,11 @@ class SignupForm extends Component {
         if (this.state.signedUp) {
             return(
             <div className="jumbotron">
-            <div className="container">
-            <div className="row justify-content-md-center">
-            <p>You have successfully signed up! Please use the login above.</p>;
-            </div>
-            </div>
+                <div className="container">
+                <div className="row justify-content-md-center">
+                    <p>You have successfully signed up! Please use the login above.</p>;
+                </div>
+                </div>
             </div>
             )}
         else {
@@ -25,7 +25,6 @@ class SignupForm extends Component {
 
     render() {
         return(
-
             <div>
                  <Sform />
 
