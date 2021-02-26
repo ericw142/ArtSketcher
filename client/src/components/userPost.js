@@ -14,7 +14,6 @@ class UserPost extends Component {
         let url = "/api/userPost/"+ username;
         axios.get(url)
         .then(res=> {
-         
           let posts = res.data;
           this.setState({posts})
         })
@@ -52,7 +51,7 @@ class UserPost extends Component {
         return(
             <div className="marginTop">
                 <div className="row" style={{ textAlign : 'center;'}}>
-                {this.state.posts.map(post => (<ProfilePost Delete={this.Delete} image={post.image} user={post.user} text={post.text} id={post._id} key={post._id}/>))}
+                    {this.state.posts.map(post => (<ProfilePost Delete={this.Delete} image={post.image} user={post.user} text={post.text} id={post._id} key={post._id}/>))}
                 </div>
             </div>
         )
